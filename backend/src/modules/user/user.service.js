@@ -59,6 +59,10 @@ class UserService {
   async deleteUser(id) {
     return await USER_MODEL.findByIdAndDelete(id);
   }
+
+  async getById(id) {
+    return await USER_MODEL.findById(id);
+  }
 }
 
 export default new UserService();

@@ -58,4 +58,16 @@ export default class UserController {
       next(err);
     }
   };
+
+  getById = async (req, res, next) => {
+    try {
+
+      const user = await this.userService.getById(req.params.id);
+      if(!user) return res.fail("User not found", statusCode.NOT_FOUND);
+
+      return res.success("User fetched successfully", user, statusCode.OK);
+    } catch (err) {
+      next(err);
+    }
+  };
 }
