@@ -43,7 +43,8 @@ app.get('/cicd', (req, res) => {
      res.send(`This is CICD pipeline ${process.env.NAME}`);
 })
 
-app.use('/api/v1/user', userRoute);
+// app.use('/api/v1/user', userRoute);
+app.use('users', userRoute);
 
 app.use(notFound);
 app.use(errorHandler);
