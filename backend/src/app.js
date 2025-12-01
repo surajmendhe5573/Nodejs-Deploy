@@ -44,7 +44,7 @@ app.get('/cicd', (req, res) => {
 })
 
 // app.use('/api/v1/user', userRoute);
-app.use('users', userRoute);
+app.use('/users', userRoute);
 
 app.use(notFound);
 app.use(errorHandler);
