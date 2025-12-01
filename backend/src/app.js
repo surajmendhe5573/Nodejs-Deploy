@@ -35,6 +35,10 @@ app.get('/about', (req, res) => {
      res.send('This is about page !');
 })
 
+app.get('/home', (req, res) => {
+     res.send('This is home page !');
+})
+
 app.get('/contact', (req, res) => {
      res.send('This is contact page !');
 })
